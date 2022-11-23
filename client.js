@@ -34,10 +34,10 @@ const connect = function () {
   conn.on('data', (data) => {
     console.log(data);
   });
-
+return conn;
 };
 
 module.exports = {
-  connect, 
+  connect
  
 }
