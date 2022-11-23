@@ -13,7 +13,20 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("Connected successfully");    
+    console.log("Connected successfully");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 500);
+
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 1000);
+
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 2500);
+
+
     conn.write("Name: DMH");
     // conn.write("Hello from client!");
   });
