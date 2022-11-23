@@ -1,4 +1,5 @@
 const net = require("net");
+const { consumers } = require("stream");
 
 
 
@@ -13,14 +14,13 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Connected successfully");
+    conn.write("Name: DMH");
     // conn.write("Hello from client!");
   });
 
   conn.on('data', (data) => {
     console.log(data);
   });
-
-  return conn;
 
 };
 
