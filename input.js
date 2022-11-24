@@ -30,6 +30,9 @@ const handleUserInput = function(data) {
    if(data === "d"){
     connection.write("Move: right");
    }
+   if(data === 2) {
+    connection.write("Woah!");
+   }
 };
 
 // w = "Move: up"
@@ -40,5 +43,5 @@ const handleUserInput = function(data) {
 
 module.exports = {
   setupInput 
-  // connection
+  
 }

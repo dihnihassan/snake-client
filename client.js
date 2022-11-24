@@ -1,11 +1,10 @@
 const net = require("net");
-
+const {IP, PORT} = require("./constants");
 
 const connect = function () {
   const conn = net.createConnection({
-    host: "165.227.47.243", // change to IP address of computer, more on that below
-    port: 50541,
-
+    host: IP, // change to IP address of Snake game stream
+    port: PORT
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -22,6 +21,7 @@ const connect = function () {
     console.log(data);
   });
 return conn;
+
 };
 
 module.exports = {
